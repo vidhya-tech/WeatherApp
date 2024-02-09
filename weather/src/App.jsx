@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
-import clearimg from './assets/th.jpg'
+
 import snow from './assets/sownandcloud.jpg'
 import humidity from './assets/humidity.webp'
 import wind from './assets/wind.jpg'
@@ -69,19 +69,24 @@ function App() {
     const [loading, setLoading] = useState(false)
 
     const weatherIconMap = {
-        "01d": clearicon,
-        "01n": clearicon,
-        "02n": cloudicon,
-        "02d": cloudicon,
-        "03d": drizzleicon,
-        "03n": drizzleicon,
-        "04d": drizzleicon,
-        "09d": rainicon,
-        "09n": rainicon,
-        "10d": rainicon,
-        "10n": rainicon,
-        "13d": rainicon,
-        "13n": rainicon
+        "01d": clearicon, // clear sky day
+        "01n": clearicon, // clear sky night
+        "02d": cloudicon, // few clouds day
+        "02n": cloudicon, // few clouds night
+        "03d": cloudicon, // scattered clouds day
+        "03n": cloudicon, // scattered clouds night
+        "04d": cloudicon, // broken clouds day
+        "04n": cloudicon, // broken clouds night
+        "09d": drizzleicon, // shower rain day
+        "09n": drizzleicon, // shower rain night
+        "10d": rainicon, // rain day
+        "10n": rainicon, // rain night
+        "11d": rainicon, // thunderstorm day
+        "11n": rainicon, // thunderstorm night
+        "13d": rainicon, // snow day
+        "13n": rainicon, // snow night
+        "50d": drizzleicon, // mist day
+        "50n": drizzleicon 
     }
 
     const search = async () => {
